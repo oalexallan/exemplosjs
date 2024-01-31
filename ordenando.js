@@ -27,3 +27,25 @@ const bubble_sort = (arr) => {
         return arr;
     }
 }
+
+//Function SelectionSort
+const selection_sort = (arr) => {
+    let minIdx, temp, len = arr.length;
+        len = arr,length;
+        for(let i = 0; i <len; i++){
+            minIdx = 1;
+            for(let j = i+1; j < len; j++){
+                if(arr[j] <arr[minIdx]){
+                    minIdx = j;
+                }
+            }
+            swap(arr, i, minIdx);
+        }
+        return arr;
+};
+
+//Function Partitioning
+const partition = (arr, pivot, left, rigth) => {
+    let pivotValue = arr[pivot]
+    
+}
