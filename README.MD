@@ -38,3 +38,17 @@ A terceira parte do projeto envolveu a criação de um arquivo HTML chamado `usu
 
 O projeto apresentou vários desafios, principalmente o uso do Vue.js, que foi uma nova tecnologia para mim. Apesar disso, consegui implementá-lo com sucesso tanto no `receitas.html` quanto, principalmente, no `usuarios.html`. Outro desafio foi criar funções de forma simples e bem estruturada no `ordenando.js`.
 
+## Imagem dos Projetos Finalizados
+
+### Ordenando Valores
+
+<img src='./img/ordenandoValores.png' style=' border-radius:20px;'>
+
+### Recietas
+
+<img src='./img/receitas.png' style=' border-radius:20px;'>
+
+### Usuários de Teste Via REST
+
+<img src='./img/usuarios.png' style=' border-radius:20px;'>
+
