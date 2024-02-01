@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "receita": "Macarrão à Carbonara",
+    "ingredientes": "200g de espaguete, 100g de pancetta ou bacon, 2 ovos, 1 xícara de queijo parmesão ralado, 2 dentes de alho, sal e pimenta a gosto",
+    "modo_preparo": "1. Cozinhe o espaguete al dente de acordo com as instruções da embalagem. 2. Enquanto isso, frite a pancetta ou bacon em uma frigideira até que fique crocante. 3. Em uma tigela, bata os ovos e adicione o queijo parmesão ralado. 4. Quando o espaguete estiver pronto, escorra e reserve um pouco da água do cozimento. 5. Misture o espaguete cozido, a pancetta frita e o alho picado na frigideira. 6. Retire do fogo e adicione a mistura de ovos e queijo, mexendo rapidamente para não coagular. Se necessário, adicione um pouco da água do cozimento para obter a consistência desejada. 7. Tempere com sal e pimenta a gosto. Sirva imediatamente.",
+    "link_imagem": "https://i.ytimg.com/vi/rY4mz5TLtz4/maxresdefault.jpg",
+    "tipo": "salgado",
+    "created_at": "2023-12-31T01:54:02.909Z",
+    "IngredientesBase": [
+      {
+        "id": 1,
+        "nomesIngrediente": [
+          "espaguete",
+          "pancetta",
+          "ovos",
+          "queijo parmesão",
+          "alho"
+        ],
+        "receita_id": 1,
+        "created_at": "2023-12-31T01:54:02.909Z"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "receita": "Salmão Grelhado com Molho de Limão",
+    "ingredientes": "4 filés de salmão, suco de 2 limões, 2 colheres de sopa de azeite de oliva, 2 dentes de alho picados, sal e pimenta a gosto",
+    "modo_preparo": "1. Tempere os filés de salmão com sal, pimenta, suco de limão e alho picado. Deixe marinar por 30 minutos. 2. Aqueça o azeite de oliva em uma frigideira e grelhe os filés de salmão por cerca de 4 minutos de cada lado ou até que estejam cozidos. 3. Sirva os filés de salmão com o molho de limão por cima.",
+    "link_imagem": "https://www.mococa.com.br/wp-content/uploads/2022/03/Salmao-grelhao-ao-molho-de-limao.jpeg",
+    "tipo": "salgado",
+    "created_at": "2023-12-31T01:55:09.486Z",
+    "IngredientesBase": [
+      {
+        "id": 5,
+        "nomesIngrediente": [
+          "salmão",
+          "limão",
+          "azeite de oliva",
+          "alho"
+        ],
+        "receita_id": 5,
+        "created_at": "2023-12-31T01:55:09.486Z"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "receita": "Pão de Queijo",
+    "ingredientes": "250g de polvilho doce, 100ml de leite, 100ml de água, 80ml de óleo, 1 ovo, 100g de queijo parmesão ralado, sal a gosto",
+    "modo_preparo": "1. Em uma panela, aqueça o leite, a água e o óleo até ferver. 2. Despeje essa mistura sobre o polvilho doce e mexa até formar uma massa. 3. Deixe a massa esfriar um pouco e adicione o ovo, o queijo parmesão ralado e sal a gosto. 4. Amasse bem até que a massa esteja homogênea. 5. Modele bolinhas com a massa e coloque em uma assadeira untada. 6. Leve ao forno preaquecido a 180°C por aproximadamente 20 minutos ou até que os pães de queijo estejam dourados.",
+    "link_imagem": "https://www.allrecipes.com/thmb/t1_kc78zVgR-59-2lpPrSEXAWuE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8796530-brazilian-cheese-bread-pao-de-queijo-Faith-Ang-4x3-1-2000-a00a691330fd450683950ec993b9a791.jpg",
+    "tipo": "salgado",
+    "created_at": "2023-12-31T01:55:14.753Z",
+    "IngredientesBase": [
+      {
+        "id": 6,
+        "nomesIngrediente": [
+          "polvilho doce",
+          "leite",
+          "água",
+          "óleo",
+          "ovo",
+          "queijo parmesão"
+        ],
+        "receita_id": 6,
+        "created_at": "2023-12-31T01:55:14.753Z"
+      }
+    ]
+  }
+]

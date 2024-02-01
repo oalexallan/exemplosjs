@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<link rel="stylesheet" href="./ordenando.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenando Valores</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header {
+            margin: 0 0 20px 0;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .containerValor {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        input {
+            width: 280px;
+            padding: 5px;
+            border-radius: 6px;
+            margin: 5px 0;
+        }
+
+        button {
+            background-color: rgb(13, 110, 253);
+            width: 100px;
+            height: 35px;
+            color: white;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+
+        .containerOption {
+            width: 280px;
+            padding: 5px;
+            border-radius: 6px;
+            margin: 20px 0 0 0;
+        }
+
+        hr {
+            width: 280px;
+        }
+
+        #valores {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">Ordenando Valores</h1>
+    </header>
+    <main class="main">
+        <section class=" containerValor">
+            <label for="valor">Valor</label>
+            <input type="number" id="valor">
+            <button onclick="add()">Adicionar</button>
+        </section>
+        <hr>
+        <select class="containerOption" id="algoritmo">
+            <option value="bubble">Bubble Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="quick">Quick Sort</option>
+        </select>
+        <section class="containerBtn">
+            <button onclick="ordenar()">Ordenar</button>
+            <button onclick="misturar()">Misturar</button>
+        </section>
+        <hr>
+        <ul id='valores'></ul>
+    </main>
+    <script src="./ordenando.js"></script>
+    <script type='text/javascript'>
+
+        document.getElementById('valor').addEventListener('keyup', function (e) {
+            var key = e.which || e.keyCode;
+            if (key == 13) { // código da tecla Enter
+                add(); // chama a função add
+            }
+        });
+
+
+        function add() {
+            var valor = document.getElementById('valor');
+            if (valor.value !== '') { // verifica se o valor não é nulo
+                var valores = document.getElementById('valores');
+                var node = document.createElement('li');
+                var textNode = document.createTextNode(valor.value);
+                node.appendChild(textNode);
+                valores.appendChild(node);
+            }
+        }
+
+        function ordenar() {
+            var valores = document.getElementById('valores');
+            var algoritmo = document.getElementById('algoritmo');
+            var vetor = Array.from(valores.children).map(function (li) {
+                return parseInt(li.innerHTML);
+            });
+            switch (algoritmo.value) {
+                case 'bubble':
+                    vetor = bubble_sort(vetor);
+                    break;
+                case 'selection':
+                    vetor = selection_sort(vetor);
+                    break;
+                case 'quick':
+                    vetor = quick_sort(vetor, 0, vetor.length - 1);
+                    break;
+            }
+            valores.innerHTML = vetor.map(function (num) {
+                return '<li>' + num + '</li>';
+            }).reduce(function (a, b) {
+                return a + b;
+            });
+        }
+
+        function misturar() {
+            var valores = document.getElementById('valores');
+            var vetor = Array.from(valores.children).map(function (li) {
+                return parseInt(li.innerHTML);
+            });
+            shuffle(vetor, vetor.length);
+            valores.innerHTML = vetor.map(function (num) {
+                return '<li>' + num + '</li>';
+            }).reduce(function (a, b) {
+                return a + b;
+            });
+        }
+    </script>
+
+</body>
+
+</html>

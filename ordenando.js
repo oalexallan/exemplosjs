@@ -30,22 +30,45 @@ const bubble_sort = (arr) => {
 
 //Function SelectionSort
 const selection_sort = (arr) => {
-    let minIdx, temp, len = arr.length;
-        len = arr,length;
-        for(let i = 0; i <len; i++){
-            minIdx = 1;
-            for(let j = i+1; j < len; j++){
-                if(arr[j] <arr[minIdx]){
-                    minIdx = j;
-                }
+    let minIdx, temp, 
+        len = arr.length;
+    for(let i = 0; i < len; i++){
+        minIdx = i;
+        for(let j = i+1; j < len; j++){
+            if(arr[j] < arr[minIdx]){
+                minIdx = j;
             }
-            swap(arr, i, minIdx);
         }
-        return arr;
-};
+        swap(arr, i, minIdx);
+    }
+    return arr;
+}
 
 //Function Partitioning
-const partition = (arr, pivot, left, rigth) => {
-    let pivotValue = arr[pivot]
-    
+const partition = (arr, pivot, left, right) => {
+    let pivotValue = arr[pivot], partitionIndex = left;
+
+    for(let i = left; i < right; i++){
+        if(arr[i] < pivotValue){
+            swap(arr, i, partitionIndex);
+            partitionIndex++;
+        }
+    }
+    swap(arr, right, partitionIndex);
+    return partitionIndex;
+}
+
+//Function QuickSort
+const quick_sort = (arr, left, right) => {
+    let len = arr.length, 
+    pivot, partitionIndex;
+
+    if(left < right){
+        pivot = right;
+        partitionIndex = partition(arr, pivot, left, right);
+        
+        quick_sort(arr, left, partitionIndex - 1);
+        quick_sort(arr, partitionIndex + 1, right);
+    }
+    return arr;
 }
